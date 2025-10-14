@@ -256,6 +256,50 @@
             background: transparent !important;
         }
 
+        /* About Section */
+        .about-section {
+            background: var(--dark-bg-solid);
+            padding: 120px 0;
+            position: relative;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 40px;
+            letter-spacing: -1px;
+        }
+
+        .about-description {
+            font-size: 18px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            padding: 16px 32px;
+        }
+
+        .cta-icon {
+            font-size: 16px;
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 30px 25px;
@@ -308,5 +352,25 @@
             .cta-button {
                 padding: 12px 24px;
                 font-size: 12px;
+            }
+
+            /* About Section Mobile */
+            .about-section {
+                padding: 80px 0;
+            }
+
+            .about-title {
+                font-size: clamp(2rem, 5vw, 3rem);
+                margin-bottom: 30px;
+            }
+
+            .about-description {
+                font-size: 16px;
+                margin-bottom: 40px;
+            }
+
+            .about-cta {
+                padding: 14px 28px;
+                font-size: 13px;
             }
         }
