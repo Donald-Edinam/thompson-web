@@ -5,11 +5,21 @@
             // Add your navigation logic here
         });
 
-        // Parallax effect on scroll
+        // Parallax effect on scroll & Header background change
         window.addEventListener('scroll', function() {
             const heroSection = document.querySelector('.hero-section');
+            const navbar = document.querySelector('nav');
             const scrollPosition = window.pageYOffset;
+            
+            // Parallax effect
             heroSection.style.backgroundPosition = `center ${scrollPosition * 0.5}px`;
+            
+            // Header background change on scroll
+            if (scrollPosition > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         });
 
         // Fade in animation
