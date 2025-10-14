@@ -1,4 +1,4 @@
-/* Unified Color Scheme Variables */
+        /* Unified Color Scheme Variables */
         :root {
             --primary-accent: #ff6b35;
             --primary-accent-hover: #ff8555;
@@ -17,9 +17,15 @@
             
             --border-subtle: rgba(255, 255, 255, 0.1);
             --border-light: rgba(255, 255, 255, 0.3);
+
+            /* Professional Crypto/Tech Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --font-mono: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
         }
 
-        .hero-section {
+        * {
+            font-family: var(--font-primary);
+        }        .hero-section {
             position: relative;
             width: 100%;
             min-height: 100vh;
@@ -61,7 +67,9 @@
         }
 
         .breadcrumb {
+            font-family: var(--font-mono);
             font-size: 12px;
+            font-weight: 500;
             color: #aaa;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -70,6 +78,7 @@
 
         .breadcrumb span {
             color: var(--primary-accent);
+            font-weight: 600;
         }
 
         .hero-subtitle {
@@ -80,11 +89,13 @@
         }
 
         .hero-title {
+            font-family: var(--font-primary);
             font-size: clamp(3.5rem, 12vw, 8rem);
-            font-weight: 900;
-            line-height: 1;
+            font-weight: 800;
+            line-height: 0.95;
             color: var(--text-primary);
-            letter-spacing: -3px;
+            letter-spacing: -2px;
+            text-rendering: optimizeLegibility;
         }
 
         .hero-info-box {
@@ -97,7 +108,9 @@
         }
 
         .info-title {
+            font-family: var(--font-mono);
             font-size: 13px;
+            font-weight: 600;
             color: var(--primary-accent);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -111,6 +124,7 @@
         }
 
         .cta-button {
+            font-family: var(--font-primary);
             background: linear-gradient(135deg, var(--primary-accent) 0%, var(--primary-accent-hover) 100%);
             color: var(--text-primary);
             border: none;
@@ -180,7 +194,10 @@
 
         /* Logo and brand text */
         nav .self-center {
+            font-family: var(--font-primary) !important;
+            font-weight: 700 !important;
             color: var(--text-primary) !important;
+            letter-spacing: -0.5px;
         }
 
         /* Custom logo icon */
@@ -191,9 +208,12 @@
 
         /* Navigation links */
         nav ul li a {
+            font-family: var(--font-primary) !important;
+            font-weight: 500 !important;
             color: var(--text-secondary) !important;
             background: transparent !important;
             transition: all 0.3s ease;
+            letter-spacing: 0.25px;
         }
 
         nav ul li a:hover,
@@ -204,6 +224,10 @@
 
         /* Get started button */
         nav button[type="button"]:first-of-type {
+            font-family: var(--font-primary) !important;
+            font-weight: 600 !important;
+            font-size: 14px !important;
+            letter-spacing: 0.5px !important;
             background: linear-gradient(135deg, var(--primary-accent) 0%, var(--primary-accent-hover) 100%) !important;
             color: var(--text-primary) !important;
             border: none !important;
@@ -270,12 +294,14 @@
         }
 
         .about-title {
+            font-family: var(--font-primary);
             font-size: clamp(2.5rem, 6vw, 4rem);
             font-weight: 700;
-            line-height: 1.2;
+            line-height: 1.15;
             color: var(--text-primary);
             margin-bottom: 40px;
             letter-spacing: -1px;
+            text-rendering: optimizeLegibility;
         }
 
         .about-description {
