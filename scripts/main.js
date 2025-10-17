@@ -17,6 +17,14 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
+// Set current year in footer
+document.addEventListener('DOMContentLoaded', function() {
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+});
+
 // Update active navigation link based on scroll position
 function updateActiveNavLink() {
     const sections = ['home', 'about', 'skills', 'projects', 'experience', 'services', 'contact'];
