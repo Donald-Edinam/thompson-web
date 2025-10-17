@@ -34,7 +34,7 @@
             min-height: 100vh;
             /* Bias the background image upward so the face is visible */
             background: linear-gradient(var(--dark-bg), var(--dark-bg)),
-                        url('../src/assets/hero-img.jpeg') center var(--hero-focal-y)/cover;
+                        url('/src/assets/hero-img.jpeg') center var(--hero-focal-y)/cover;
             background-attachment: fixed;
             display: flex;
             align-items: center;

@@ -1,17 +1,16 @@
 {
   "buildCommand": null,
-  "outputDirectory": "src",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
+  "routes": [
     {
-      "source": "/(.*)",
-      "destination": "/index.html"
+      "src": "/(.*)",
+      "dest": "/src/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/assets/(.*)",
+      "source": "/src/assets/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
