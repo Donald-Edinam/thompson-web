@@ -21,6 +21,9 @@
             /* Professional Crypto/Tech Typography */
             --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             --font-mono: 'JetBrains Mono', 'Fira Code', 'Source Code Pro', monospace;
+
+            /* Hero image focal point (vertical). Lower values show more of the top; higher values show more of the bottom */
+            --hero-focal-y: 18%;
         }
 
         * {
@@ -29,8 +32,9 @@
             position: relative;
             width: 100%;
             min-height: 100vh;
-            background: linear-gradient(var(--dark-bg), var(--dark-bg)), 
-                        url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1200&h=1200&fit=crop') center/cover;
+            /* Bias the background image upward so the face is visible */
+            background: linear-gradient(var(--dark-bg), var(--dark-bg)),
+                        url('/src/assets/hero-img.jpeg') center var(--hero-focal-y)/cover;
             background-attachment: fixed;
             display: flex;
             align-items: center;
@@ -345,6 +349,11 @@
 
             .decorative-dots {
                 display: none;
+            }
+
+            /* On smaller screens, push the image further up to keep the face in view */
+            .hero-section {
+                background-position: center 15%;
             }
         }
 
